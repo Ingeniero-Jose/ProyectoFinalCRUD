@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD UCAMP</title>
+    <title>Lista de Misiones</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="./src/scripts/style.css">
     
@@ -14,7 +14,7 @@
     <!--Insertamos el NAVBAR desde Boostrap-->
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand">
             <img src="https://cdn.dribbble.com/users/27903/screenshots/9533517/media/e0751382a245f6d525da9901755fb15e.png?compress=1&resize=400x300&vertical=center" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
             Progresos en mis videojuegos
           </a>
@@ -55,3 +55,27 @@
           
           </fieldset>
           </form>
+        </main>
+
+        <!--Tabla desde boostrapp 5-->
+        <table id="tasks" class="container">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Video Juego</th>
+              <th scope="col">Misión</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+        </table>
+        
+  
+      
+      <!--Mi script-->
+      <script src="./src/scripts/main.js"></script>
+      
+      <!--script de boostrap-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+      </nav>
+  </body>
+  </html>
