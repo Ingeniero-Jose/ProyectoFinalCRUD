@@ -26,7 +26,7 @@ const crearTarea = (event) => {
      todoList.push(tareasTODO);
 
    //Volveremos a guardar la lista en el localStorage
- localStorage.setItem("todolist", JSON.stringify(todoList));
+ localStorage.setItem("todoList", JSON.stringify(todoList));
 
   }
 
@@ -40,12 +40,14 @@ const crearTarea = (event) => {
 //Funcion para leer en el localStorage
 const renderTodoList = () => {
   const todoList = JSON.parse(localStorage.getItem("todoList"));
-  console.log(JSON.parse(localStorage.getItem("todoList")));
-  todoList.forEach((task) => {
-     const tarea = task.tarea;
-     const descripcion = task.descripcion;
+  const todoListContenedor = document.getElementById("tasks");
 
-     document.getElementById("tasks").innerHTML += `
+  
+  todoList.forEach((task) => {
+    const tarea = task.tarea;
+    const descripcion = task.descripcion;
+  
+     todoListContenedor.innerHTML +=`
      <tr>
      <td>#</td>
      <td>${tarea}</td>
@@ -66,7 +68,7 @@ const deleteTask = (tarea) => {
   let todoList = JSON.parse(localStorage.getItem("todoList"));
   todoList = todoList.filter((task) => task.tarea !== tarea);
   localStorage.setItem("todoList", JSON.stringify(todoList));
-  renderTodoList();
+  
 };
 
 const updateTask = (tarea) => {
@@ -80,8 +82,8 @@ const updateTask = (tarea) => {
       todoList[i].tarea = document.getElementById("tarea").value;
       todoList[i].descripcion = document.getElementById("descripcion").value;
       break;
-    }
-  }
+    };
+  };
 
   /* Campos del formulario que queden vacios */
   document.getElementById("tarea").value = "";
