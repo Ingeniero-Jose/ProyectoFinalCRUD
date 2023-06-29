@@ -16,6 +16,21 @@ h1{
     color: aliceblue;
 }
 
-.button{
-    color: red;
+.button2{
+    background-color:brown;
+    color: aliceblue;
 }
+
+.button1{
+    background-color: darkcyan;
+    color: aliceblue;
+}
+
+.principal{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.face{
+    height: 35px;
+}
+

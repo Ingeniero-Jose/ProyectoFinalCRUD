@@ -51,8 +51,8 @@ const renderTodoList = () => {
      <td>${tarea}</td>
      <td>${descripcion}</td>
      <td>
-     <button class ="button is-warning is-mall">Actualizar</button>
-     <button class ="button is-danger is-mall">Eliminar</button>
+     <button class ="button1 is-warning is-mall">Actualizar</button>
+     <button class ="button2 is-danger is-mall">Eliminar</button>
      </td>
      </tr>
      `;
@@ -60,3 +60,34 @@ const renderTodoList = () => {
   });
 };
 renderTodoList();
+
+const deleteTask = (tarea) => {
+  /* Vamos a traer la lista de elementos desde nuestro navegador */
+  let todoList = JSON.parse(localStorage.getItem("todoList"));
+  todoList = todoList.filter((task) => task.tarea !== tarea);
+  localStorage.setItem("todoList", JSON.stringify(todoList));
+  renderTodoList();
+};
+
+const updateTask = (tarea) => {
+  /* Vamos a traer la lista de elementos desde nuestro navegador */
+  let todoList = JSON.parse(localStorage.getItem("todoList"));
+
+  //Buscar la tarea
+  for (let i = 0; i < todoList.length; i++) {
+    if (todoList[i].tarea === tarea) {
+      /* Actualizar la tarea con los nuevos valores */
+      todoList[i].tarea = document.getElementById("tarea").value;
+      todoList[i].descripcion = document.getElementById("descripcion").value;
+      break;
+    }
+  }
+
+  /* Campos del formulario que queden vacios */
+  document.getElementById("tarea").value = "";
+  document.getElementById("descripcion").value = "";
+
+  //Actualizamos nuestro lS con la lista actualizada
+  localStorage.setItem("todoList", JSON.stringify(todoList));
+  renderTodoList();
+};
