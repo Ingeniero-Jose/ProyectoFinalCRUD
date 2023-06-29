@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD UCAMP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./src/scripts/style.css">
+    
+
+</head>
+<body>
+<nav class="principal">
+    <!--Insertamos el NAVBAR desde Boostrap-->
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="https://cdn.dribbble.com/users/27903/screenshots/9533517/media/e0751382a245f6d525da9901755fb15e.png?compress=1&resize=400x300&vertical=center" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+            Progresos en mis videojuegos
+          </a>
+        </div>
+      </nav>
+
+      <main class="container mt-3">
+        <h1>Lista de temas para Stream</h1>
+
+        <!--Form desde Boosnipp-->
+        <form class="form-horizontal">
+          <fieldset>
+          
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Video Juego:</label>  
+            <div class="col-md-4">
+            <input id="tarea" name="textinput" type="text" placeholder="The Last Of Us" class="form-control input-md" required="">
+              
+            </div>
+          </div>
+          
+          <!-- Textarea -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="descripcion">Misiones a pasar:</label>
+            <div class="col-md-4">                     
+              <textarea class="form-control" id="descripcion" name="descripcion"></textarea>
+            </div>
+          </div>
+          
+          <!-- Button -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="btnPrimario"></label>
+            <div class="col-md-4">
+              <button id="btnPrimario" name="btnPrimario" class="btn btn-primary" onclick="crearTarea(event)">Enviar</button>
+            </div>
+          </div>
+          
+          </fieldset>
+          </form>
