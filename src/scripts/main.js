@@ -5,7 +5,8 @@ const crearTarea = (event) => {
   event.preventDefault();
   const tarea = document.getElementById("tarea").value;
   const descripcion = document.getElementById("descripcion").value;
-  const tareasTODO = {
+
+  const task = {
      tarea,
      descripcion,
   };
@@ -15,7 +16,7 @@ const crearTarea = (event) => {
      let todoList = [];
 
      //Mandar mi tarea al array
-     todoList.push(tareasTODO);
+     todoList.push(task);
 
      //Guardar la lista en el localStorage
      localStorage.setItem("todoList", JSON.stringify(todoList));
@@ -23,7 +24,7 @@ const crearTarea = (event) => {
      let todoList = JSON.parse(localStorage.getItem("todoList"));
 
      //Añadir el nuevo elemento a la lista
-     todoList.push(tareasTODO);
+     todoList.push(task);
 
    //Volveremos a guardar la lista en el localStorage
  localStorage.setItem("todoList", JSON.stringify(todoList));
