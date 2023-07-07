@@ -78,7 +78,7 @@ const updateTask = (tarea) => {
 
   //Buscar la tarea
   for (let i = 0; i < todoList.length; i++) {
-    if (todoList[i].tarea === tarea) {
+    if (todoList[i].tarea === descripcion) {
       /* Actualizar la tarea con los nuevos valores */
       todoList[i].tarea = document.getElementById("tarea").value;
       todoList[i].descripcion = document.getElementById("descripcion").value;

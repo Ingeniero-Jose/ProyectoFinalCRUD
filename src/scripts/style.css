@@ -3,6 +3,9 @@ body{
    background-image:url(https://www.coliseugeek.com.br/wp-content/uploads/2023/01/75dc0-clickwallpapers-free-download-the-last-of-us-2-4k-wallpaper-5-scaled-1.jpg);
    background-attachment: fixed;
    background-size: cover;
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
 }
 
 h1{
@@ -32,11 +35,14 @@ h1{
 }
 
 footer{
-    background-color: aliceblue;
+    background-color: dimgray;
     text-align: center;
     position: absolute;
     bottom: 0;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 
